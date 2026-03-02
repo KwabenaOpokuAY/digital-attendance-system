@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student {
+private:
+    string name;
+    string indexNumber;
+    string programme;
+
+public:
+    // Constructor to initialize a new student
+    Student(string n, string idx, string prog) {
+        name = n;
+        indexNumber = idx;
+        programme = prog;
+    }
+
+    // Getters to access private data
+    string getIndexNumber() { return indexNumber; }
+    
+    // Function to display student details in the console [cite: 33, 39]
+    void displayStudent() {
+        cout << "Index: " << indexNumber << " | Name: " << name 
+             << " | Prog: " << programme << endl;
+    }
+};
