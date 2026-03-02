@@ -1,0 +1,19 @@
+void searchStudent(const vector<Student>& database) {
+    string searchIdx;
+    cout << "Enter Index Number to search: ";
+    cin >> searchIdx;
+
+    bool found = false;
+    for (auto s : database) {
+        if (s.getIndexNumber() == searchIdx) {
+            cout << "\nStudent Found:" << endl;
+            s.displayStudent();
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Student with index " << searchIdx << " not found." << endl;
+    }
+}
